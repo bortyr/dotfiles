@@ -208,4 +208,16 @@ bar {
 #
 default_border pixel 2 
 
+# Pulse Audio controls
+exec_always amixer 
+exec_always pulseaudio --start
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
+bindsym XF86AudioMute exec amixer -q -D pulse set Master 1+ toggle
+
+# Sreen brightness controls
+exec_always xbacklight
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
 include /etc/sway/config.d/*
