@@ -220,4 +220,8 @@ exec_always xbacklight
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
+# Wallpaper
+#output "*" bg /home/bt/Downloads/bg/archlinux_text_middle.png fill
+output "*" bg /home/bt/Downloads/bg/arch_logo_corner.jpg fill
+
 include /etc/sway/config.d/*
