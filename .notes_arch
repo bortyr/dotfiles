@@ -1,0 +1,45 @@
+# Packages
+sudo pacman -S
+	iwd \ #wifi
+	sway \
+	alacritty \
+	neovim \
+	git \
+	firefox \
+	wofi \
+	waybar \
+	noto-fonts \ #fonts
+ 	ttf-nerd-fonts-symbols \ #fonts
+	man \
+	man-db \
+	starship \ # shellprompt
+	alsa-utils \
+	pulseaudio \
+	pulseaudio-alsa \
+	pulseaudio-bluetooth \
+	pulseaudio-jack \
+	pavucontrol \ # noise controll
+	acpilight \ # backlight control
+	sway-bg \ # wallpaper
+
+# Enable firefox wayland  
+sudo nvim /etc/enviroment
+MOZ_ENABLE_WAYLAND=1
+
+# Dotfiles using git
+https://wiki.archlinux.org/index.php/Dotfiles
+git init --bare ~/.dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+config config status.showUntrackedFiles no
+
+# Check tracked files
+git ls-tree -r master --name-only
+
+# Filtering confidential information 
+https://wiki.archlinux.org/index.php/Git#Filtering_confidential_information
+
+# vim plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# vimrc for neovim is .config/nvim/init.vim
