@@ -21,6 +21,8 @@ sudo pacman -S
 	pavucontrol \ # noise controll
 	acpilight \ # backlight control
 	sway-bg \ # wallpaper
+	ripgrep \ # better grep
+	keychain \ # manage ssh keys
 
 # Enable firefox wayland  
 sudo nvim /etc/enviroment

@@ -3,6 +3,8 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
+#output * resolution --custom 1080x1815
+output * resolution --custom 2560x1330
 
 ### Variables
 #
@@ -209,19 +211,19 @@ bar {
 default_border pixel 2 
 
 # Pulse Audio controls
-exec_always amixer 
-exec_always pulseaudio --start
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
-bindsym XF86AudioMute exec amixer -q -D pulse set Master 1+ toggle
+#exec_always amixer 
+#exec_always pulseaudio --start
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
+#bindsym XF86AudioMute exec amixer -q -D pulse set Master 1+ toggle
 
 # Sreen brightness controls
-exec_always xbacklight
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+#exec_always xbacklight
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Wallpaper
 #output "*" bg /home/bt/Downloads/bg/archlinux_text_middle.png fill
-output "*" bg /home/bt/Downloads/bg/arch_logo_corner.jpg fill
+#output "*" bg /home/bt/Downloads/bg/arch_logo_corner.jpg fill
 
 include /etc/sway/config.d/*
