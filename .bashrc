@@ -22,3 +22,7 @@ eval "$(starship init bash)"
 
 # Keychain
 eval $(keychain --eval --quiet btyran)
+
+# Export editor
+export VISUAL=nvim
+export EDITOR="$VISUAL"
