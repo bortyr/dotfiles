@@ -26,3 +26,6 @@ eval $(keychain --eval --quiet btyran)
 # Export editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+
+# Virtualbox cursor issue
+export WLR_NO_HARDWARE_CURSORS=1
