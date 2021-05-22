@@ -19,10 +19,17 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu wofi --show run
+
+# Keyboard Layout
+input * xkb_layout "pl"
+# Make Caps Lock an additional Esc
+#input * xkb_options "caps:escape"
+
 ### Output configuration
-#
+
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
 #
 # Example configuration:
 #
@@ -209,19 +216,18 @@ bar {
 default_border pixel 2 
 
 # Pulse Audio controls
-exec_always amixer 
-exec_always pulseaudio --start
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
-bindsym XF86AudioMute exec amixer -q -D pulse set Master 1+ toggle
+#exec_always amixer 
+#exec_always pulseaudio --start
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
+#bindsym XF86AudioMute exec amixer -q -D pulse set Master 1+ toggle
 
 # Sreen brightness controls
-exec_always xbacklight
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+#exec_always xbacklight
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Wallpaper
-#output "*" bg /home/bt/Downloads/bg/archlinux_text_middle.png fill
-output "*" bg /home/bt/Downloads/bg/arch_logo_corner.jpg fill
+output "*" bg /home/bt/Downloads/bg/arch_bg.png fill
 
 include /etc/sway/config.d/*

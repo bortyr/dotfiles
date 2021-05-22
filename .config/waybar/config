@@ -2,13 +2,9 @@
     "position" : "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["battery","network", "pulseaudio", "clock"],
+    "modules-right": ["network", "pulseaudio", "clock"],
     "sway/window": {
         "max-length": 50
-    },
-    "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
     },
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) ",
