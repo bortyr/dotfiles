@@ -22,6 +22,7 @@ sudo pacman -S
 	acpilight \ # backlight control
 	sway-bg \ # wallpaper
 	exa \ # better ls
+	bat \ # better cat
 
 # Enable firefox wayland  
 sudo nvim /etc/enviroment
