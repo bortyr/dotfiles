@@ -10,6 +10,7 @@ sudo pacman -S
 	waybar \
 	noto-fonts \ #fonts
  	ttf-nerd-fonts-symbols \ #fonts
+	noto-fonts-cjk \ # asian symbols
 	man \
 	man-db \
 	starship \ # shellprompt
