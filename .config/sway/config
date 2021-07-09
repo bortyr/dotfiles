@@ -207,6 +207,7 @@ bar {
 ## Borders
 #
 default_border pixel 2 
+smart_borders on
 
 # Pulse Audio controls
 exec_always amixer 
